@@ -1,0 +1,30 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+
+&sysosc {
+	clock-frequency = <DT_FREQ_M(4)>;
+};
+
+&mclk {
+	clocks = < &sysosc >;
+	//clk-div = <2>;
+};
+
+&hsclk {
+	status = "disabled";
+};
+
+&ulpclk {
+	/delete-property/ clk-div;
+};
+
+&pll {
+	status = "disabled";
+};
+
+&uart0 {
+	status = "disabled";
+};
+
+&pwma0 {
+	status = "disabled";
+};
